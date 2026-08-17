@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Ica — Dari Naufal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia, "Times New Roman", serif;
+    background:#f5f3ef;
+    color:#292725;
+    overflow-x:hidden;
+}
+
+.bg{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+        radial-gradient(circle at 15% 20%,rgba(210,200,190,.25),transparent 30%),
+        radial-gradient(circle at 85% 75%,rgba(190,200,210,.25),transparent 30%),
+        #f5f3ef;
+}
+
+/* PEMBUKA */
+
+.opening{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+}
+
+.opening-box{
+    max-width:600px;
+    animation:fadeUp 1.4s ease;
+}
+
+.label{
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:4px;
+    color:#888;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.opening h1{
+    font-size:46px;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.opening p{
+    font-family:Arial,sans-serif;
+    color:#777;
+    font-size:14px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.btn{
+    border:1px solid #292725;
+    background:transparent;
+    padding:14px 30px;
+    border-radius:30px;
+    color:#292725;
+    font-size:13px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#292725;
+    color:white;
+}
+
+/* PESAN */
+
+.letter{
+    max-width:720px;
+    margin:auto;
+    padding:80px 25px 120px;
+}
+
+.date{
+    font-family:Arial,sans-serif;
+    color:#999;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-bottom:45px;
+}
+
+.letter h2{
+    font-size:34px;
+    font-weight:400;
+    margin-bottom:40px;
+}
+
+.text{
+    font-size:18px;
+    line-height:2;
+    color:#3c3936;
+}
+
+.text p{
+    margin-bottom:28px;
+}
+
+.quote{
+    margin:50px 0;
+    padding:25px 0 25px 25px;
+    border-left:2px solid #777;
+    color:#666;
+    font-size:20px;
+    font-style:italic;
+    line-height:1.7;
+}
+
+.signature{
+    margin-top:70px;
+    text-align:right;
+    color:#777;
+}
+
+.signature strong{
+    display:block;
+    margin-top:10px;
+    font-size:26px;
+    font-weight:400;
+    color:#292725;
+}
+
+/* MUSIK */
+
+.music{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:20;
+}
+
+.music button{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#292725;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+    box-shadow:0 5px 20px rgba(0,0,0,.18);
+}
+
+/* ANIMASI */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    pointer-events:none;
+    opacity:.3;
+    animation:floatUp linear forwards;
+    z-index:0;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.3;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .opening h1{
+        font-size:38px;
+    }
+
+    .letter{
+        padding:65px 22px 100px;
+    }
+
+    .letter h2{
+        font-size:29px;
+    }
+
+    .text{
+        font-size:17px;
+        line-height:1.9;
+    }
+
+    .quote{
+        font-size:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<!-- PEMBUKA -->
+
+<section class="opening">
+
+    <div class="opening-box">
+
+        <div class="label">
+            Sebuah pesan untuk Ica
+        </div>
+
+        <h1>Untuk Ica</h1>
+
+        <p>
+            Ada beberapa hal yang mungkin lebih baik disampaikan
+            dengan tenang, tanpa berharap apa pun sebagai balasannya.
+        </p>
+
+        <button class="btn" onclick="bukaPesan()">
+            Baca Pesan
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ISI PESAN -->
+
+<section class="letter" id="pesan">
+
+    <div class="date">
+        17 AGUSTUS 2026
+    </div>
+
+    <h2>Untuk Ica, yang pernah menjadi bagian penting.</h2>
+
+    <div class="text">
+
+        <p>
+            Ica, aku menulis ini bukan untuk mengubah apa pun yang sudah
+            terjadi, apalagi memaksa kamu untuk kembali. Aku cuma ingin
+            menyampaikan beberapa hal yang mungkin dulu belum sempat
+            aku katakan dengan cara yang baik.
+        </p>
+
+        <p>
+            Kita pernah menjadi bagian penting dalam kehidupan masing-masing.
+            Ada banyak hal yang kita lewati bersama. Ada cerita yang membuat
+            kita bahagia, ada perbedaan yang mungkin pernah membuat kita
+            lelah, dan pada akhirnya kita sampai di titik di mana jalan
+            kita tidak lagi sama.
+        </p>
+
+        <p>
+            Semakin bertambah waktu, aku mulai memahami bahwa tidak semua
+            hubungan harus berakhir dengan tetap bersama. Ada orang yang
+            hadir bukan untuk selamanya, tetapi tetap memiliki peran
+            penting dalam membuat kita belajar dan tumbuh.
+        </p>
+
+        <p>
+            Kalau selama bersama aku pernah melakukan kesalahan, membuat
+            Ica kecewa, atau ada sikapku yang ternyata menyakiti Ica,
+            aku benar-benar minta maaf.
+        </p>
+
+        <p>
+            Aku mungkin tidak bisa mengubah apa yang sudah terjadi.
+            Tapi setidaknya aku bisa belajar dari semuanya dan mencoba
+            menjadi seseorang yang lebih baik setelahnya.
+        </p>
+
+        <div class="quote">
+            "Tidak semua yang berakhir harus dibenci.
+            Beberapa hal cukup dikenang, dihargai, lalu dilepaskan
+            dengan tenang."
+        </div>
+
+        <p>
+            Aku juga tidak ingin menyalahkan Ica atas apa pun.
+            Kita sama-sama pernah melakukan kesalahan. Kita sama-sama
+            pernah belajar memahami satu sama lain dengan cara kita
+            masing-masing.
+        </p>
+
+        <p>
+            Sekarang aku tidak lagi ingin melihat masa lalu sebagai
+            sesuatu yang harus terus disesali. Aku memilih untuk
+            menghargainya sebagai bagian dari perjalanan yang pernah
+            membuat aku tumbuh menjadi seseorang yang lebih dewasa.
+        </p>
+
+        <p>
+            Terima kasih untuk semua waktu yang pernah kita punya.
+            Untuk percakapan, perhatian, tawa, perbedaan pendapat,
+            dan hal-hal kecil yang mungkin dulu terlihat sederhana.
+        </p>
+
+        <p>
+            Mungkin sekarang kita sudah berada di tempat yang berbeda.
+            Mungkin kehidupan kita juga akan terus berjalan ke arah
+            yang berbeda. Dan aku rasa itu tidak apa-apa.
+        </p>
+
+        <p>
+            Aku tidak tahu bagaimana kehidupan kita ke depannya.
+            Mungkin kita akan semakin jauh, mungkin hanya sesekali
+            saling mengingat, atau mungkin suatu hari kita bisa bertemu
+            lagi sebagai dua orang yang sudah jauh lebih dewasa.
+        </p>
+
+        <p>
+            Apa pun yang terjadi nanti, aku tetap berharap Ica baik-baik saja.
+        </p>
+
+        <p>
+            Aku berharap Ica menemukan banyak hal yang membuat Ica
+            bahagia. Menemukan orang-orang yang menghargai Ica,
+            lingkungan yang membuat Ica nyaman, dan kehidupan yang
+            membuat Ica merasa cukup.
+        </p>
+
+        <p>
+            Kalau suatu saat Ica mengingat aku, aku tidak berharap
+            Ica mengingat semuanya dengan rasa kecewa.
+            Cukup ingat bahwa pernah ada seseorang yang tulus
+            menghargai kehadiran Ica dalam hidupnya.
+        </p>
+
+        <p>
+            Aku tidak ingin membuat pesan ini menjadi alasan untuk
+            membuka kembali sesuatu yang sudah kita tutup.
+            Aku juga tidak meminta jawaban atau apa pun dari Ica.
+        </p>
+
+        <p>
+            Aku hanya ingin menyampaikan apa yang selama ini mungkin
+            belum pernah aku sampaikan dengan benar.
+        </p>
+
+        <p>
+            Pada akhirnya, mungkin kedewasaan bukan tentang melupakan
+            seseorang sepenuhnya, tetapi tentang mampu mengingatnya
+            tanpa harus kembali memiliki.
+        </p>
+
+        <p>
+            Terima kasih karena pernah menjadi bagian dari cerita hidupku.
+            Terima kasih untuk semua hal yang pernah kita lalui.
+            Aku akan tetap menghargai semuanya sebagai bagian dari
+            perjalanan yang pernah kita punya.
+        </p>
+
+        <p>
+            Semoga setelah ini kita sama-sama bisa melanjutkan hidup
+            dengan lebih tenang, membawa pelajaran dari masa lalu,
+            dan menjadi versi diri kita yang lebih baik.
+        </p>
+
+        <p>
+            Jaga diri baik-baik, Ica.
+        </p>
+
+    </div>
+
+    <div class="signature">
+
+        Dengan tulus,
+
+        <strong>Naufal</strong>
+
+    </div>
+
+</section>
+
+
+<!-- TOMBOL MUSIK -->
+
+<div class="music">
+
+    <button id="musicBtn" onclick="toggleMusic()">
+        ♪
+    </button>
+
+</div>
+
+
+<audio id="music" loop>
+    <!--
+    Kalau ingin musik:
+    <source src="lagu.mp3" type="audio/mpeg">
+    -->
+</audio>
+
+
+<script>
+
+function bukaPesan(){
+
+    document.getElementById("pesan").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* MUSIK */
+
+const music = document.getElementById("music");
+const musicBtn = document.getElementById("musicBtn");
+
+let playing = false;
+
+function toggleMusic(){
+
+    if(!playing){
+
+        music.play().catch(()=>{});
+
+        musicBtn.innerHTML = "Ⅱ";
+        playing = true;
+
+    }else{
+
+        music.pause();
+
+        musicBtn.innerHTML = "♪";
+        playing = false;
+
+    }
+
+}
+
+
+/* ANIMASI HATI */
+
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.innerHTML = "♡";
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (12 + Math.random() * 12) + "px";
+
+    heart.style.animationDuration =
+        (6 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+        heart.remove();
+    },11000);
+
+}
+
+setInterval(createHeart,1400);
+
+</script>
+
+</body>
+</html>
